@@ -10,6 +10,8 @@ export default function Name(props: NameProps) {
     const { showTitle, setShowTitle } = props;
     const [keyframe, setKeyframe] = useState<number>(0);
     const [isInitialLoad, setIsInitialLoad] = useState<boolean>(true);
+
+    // Timers for triggering different css transitions for the name animation
     useEffect(() => {
         if (isInitialLoad) {
             setIsInitialLoad(false);
@@ -40,7 +42,7 @@ export default function Name(props: NameProps) {
         }
 
         return () => clearAllTimeout();
-    }, [showTitle])
+    }, [showTitle, isInitialLoad])
 
     const activeKeyFrameClass = (n : number) : string => (keyframe < n) ? 'active' : 'inactive';
     

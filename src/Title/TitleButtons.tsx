@@ -15,13 +15,15 @@ export default function TitleButtons(props: TitleButtonsProps) {
     const [activeDelayed, setActiveDelayed] = useState<boolean>(true);
     const [isInitialLoad, setIsInitialLoad] = useState<boolean>(true);
 
+    // Need to delay the change in css class for the animation to go off
+    // If its not delayed the component will simply re render in the new state
     useEffect(() => {
         if (isInitialLoad) {
             setIsInitialLoad(false);
             return;
         }
-        var timer1 : NodeJS.Timeout;
 
+        var timer1 : NodeJS.Timeout;
         if (active) {
             timer1 = setTimeout(() => setActiveDelayed(true), 200)
         } else {
