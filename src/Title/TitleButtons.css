@@ -5,7 +5,7 @@
     height: 160px;
     transition: 1s;
 }
-.title-buttons-container.active {
+.title-buttons-container.inactive {
     height: 420px;
     margin-left: 22px;
 }

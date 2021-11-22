@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Name from './Name';
 import TitleButtons, { ButtonInfo } from './TitleButtons';
 import './Title.css'
@@ -13,20 +12,24 @@ const buttonInfo: ButtonInfo[] = [
         onClick: () => window.open('https://www.linkedin.com/in/matthew-dw/'),
     },
     {
-        icon: 'far fa-file',
+        icon: 'far fa-file-alt',
         onClick: () => window.open('https://www.linkedin.com/in/matthew-dw/'),
     },
     {
-        icon: 'far fa-file',
+        icon: 'far fa-envelope',
         onClick: () => window.open('https://www.linkedin.com/in/matthew-dw/'),
     },
 ]
 
-export default function Title() {
-    const [showTitle, setShowTitle] = useState<boolean>(false);
-    
+type TitleProps = {
+    showTitle: boolean;
+    setShowTitle: (clicked: boolean) => void;
+}
+
+export default function Title(props: TitleProps) {   
+    const {showTitle, setShowTitle} = props;
     return (
-        <div className={`title ${showTitle ? 'inactive' : 'active'}`}>
+        <div className={`title ${showTitle ? 'active' : 'inactive'}`}>
             <Name showTitle={showTitle} setShowTitle={setShowTitle} />
             <TitleButtons showTitle={showTitle} buttons={buttonInfo} />
         </div>

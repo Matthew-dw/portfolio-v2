@@ -9,14 +9,18 @@ type NameProps = {
 export default function Name(props: NameProps) {
     const { showTitle, setShowTitle } = props;
     const [keyframe, setKeyframe] = useState<number>(0);
-
+    const [isInitialLoad, setIsInitialLoad] = useState<boolean>(true);
     useEffect(() => {
+        if (isInitialLoad) {
+            setIsInitialLoad(false);
+            return;
+        }
         var timer1 : NodeJS.Timeout;
         var timer2 : NodeJS.Timeout;
         var timer3 : NodeJS.Timeout;
         var timer4 : NodeJS.Timeout;
 
-        if (showTitle) {
+        if (!showTitle) {
             timer1 = setTimeout(() => setKeyframe(1), 200)
             timer2 = setTimeout(() => setKeyframe(2), 300)
             timer3 = setTimeout(() => setKeyframe(3), 800)
