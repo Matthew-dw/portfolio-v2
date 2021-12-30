@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import './Name.css'
 
 type NameProps = {
@@ -9,13 +9,13 @@ type NameProps = {
 export default function Name(props: NameProps) {
     const { showTitle, setShowTitle } = props;
     const [keyframe, setKeyframe] = useState<number>(0);
-    const [isInitialLoad, setIsInitialLoad] = useState<boolean>(true);
+    const isInitalLoad = useRef<boolean>(true);
 
     // Timers for triggering different css transitions for the name animation
     useEffect(() => {
-        if (isInitialLoad) {
-            setIsInitialLoad(false);
-            return;
+        if (isInitalLoad.current) {
+            isInitalLoad.current = false;
+            return
         }
         var timer1 : NodeJS.Timeout;
         var timer2 : NodeJS.Timeout;
@@ -42,7 +42,7 @@ export default function Name(props: NameProps) {
         }
 
         return () => clearAllTimeout();
-    }, [showTitle, isInitialLoad])
+    }, [showTitle])
 
     const activeKeyFrameClass = (n : number) : string => (keyframe < n) ? 'active' : 'inactive';
     

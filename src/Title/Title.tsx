@@ -29,9 +29,11 @@ type TitleProps = {
 export default function Title(props: TitleProps) {   
     const {showTitle, setShowTitle} = props;
     return (
-        <div className={`title ${showTitle ? 'active' : 'inactive'}`}>
-            <Name showTitle={showTitle} setShowTitle={setShowTitle} />
-            <TitleButtons showTitle={showTitle} buttons={buttonInfo} />
+        <div className="title-wrapper">
+            <div className={`title ${showTitle ? 'active' : 'inactive'}`}>
+                <Name showTitle={showTitle} setShowTitle={setShowTitle} />
+                <TitleButtons showTitle={showTitle} buttons={buttonInfo} />
+            </div>
         </div>
     )
 }

@@ -1,16 +1,15 @@
 import React, { useState } from 'react';
+import Body from './Body/Body';
 import Title from './Title/Title';
 
-function App() {
+function Portfolio() {
   const [showTitle, setShowTitle] = useState<boolean>(true);
   return (
     <div>
       <Title showTitle={showTitle} setShowTitle={setShowTitle}/>
-      <div>
-        
-      </div>
+      <Body showTitle={showTitle} />
     </div>
   );
 }
 
-export default App;
+export default Portfolio;
