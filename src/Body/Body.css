@@ -1,10 +1,32 @@
-.body {
-    height: 100vh;
+.portfolio-body {
+    margin-top: 200px;
+    height: calc(100vh - 200px);
+    background: #f0f0f0;
     width: 100vw;
-    transition: 1s;
-    overflow-x: hidden;
-    position: fixed;
+    overflow-y: scroll;
 }
-.body.inactive {
-    margin-left: calc(50vw + 400px);
+.portfolio-body::-webkit-scrollbar {
+    width: 10px;
+}
+
+.portfolio-body::-webkit-scrollbar-track {
+    background: #f0f0f0; 
+}
+
+.portfolio-body::-webkit-scrollbar-thumb {
+    background: #232323; 
+}
+
+.line {
+    height: 200px;
+    width: 2px;
+    background: #232323;
+    margin-left: calc(50vw - 1px);
+}
+.line.short {
+    height: 100px;
+}
+.test {
+    margin: auto;
+    background: white;
 }

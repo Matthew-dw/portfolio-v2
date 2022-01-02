@@ -7,12 +7,15 @@ type BodyProps = {
 }
 
 export default function Body(props: BodyProps) {
-    const {showTitle} = props;
     return (
-        <div className={`body ${showTitle ? 'inactive' : 'active'}`}>
+        <div className="portfolio-body">
+            <div className="line short" />
             <Container maxWidth="sm">
-            <About />  
+                <About />  
             </Container>
+            <div className="line" />
+            <div className="line" />
+            <div className="line" />
         </div>
     );
 }

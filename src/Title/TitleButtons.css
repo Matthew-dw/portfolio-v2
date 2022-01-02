@@ -1,28 +1,43 @@
 .title-buttons-container {
-    position: relative;
-    margin-left: 10px;
-    width: 420px;
+    position: absolute;
     height: 160px;
-    transition: 1s;
+    display: flex;
+    transition: margin-left 0.8s, bottom 1s;
+    margin-left: 300px;
+    bottom: 15px;
 }
-.title-buttons-container.inactive {
-    height: 420px;
-    margin-left: 22px;
+.title-buttons-container.active {
+    margin-left: 30px;
+    bottom: 0px;
 }
 
 .title-button {
-    position: absolute;
-    box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
-    border-radius: 80px;
-    width: 80px;
-    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0), 0px 1px 1px 0px rgba(0, 0, 0, 0), 0px 1px 3px 0px rgba(0, 0, 0, 0);
+    border-radius: 10px;
+    width: 120px;
+    height: 120px;
+    margin: 15px;
+    margin-right: 40px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.title-button:hover {
+    box-shadow: 0px 2px 3px -1px rgba(0,0,0,0.25), 0px 1px 3px 0px rgba(0,0,0,0.2), 0px 1px 3px 0px rgba(0,0,0,0.2);
+}
+.title-button-icon {
     line-height: 80px;
     text-align: center;
-    font-size: 40px;
-    cursor: pointer;
-    transition: ease-in-out 0.5s;
+    font-size: 50px;
 }
-
-.title-button:hover {
-    box-shadow: 0px 2px 3px -1px rgba(0,0,0,0.2), 0px 1px 3px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
+.title-button-name {
+    margin-top: -30px;
+    font-family: 'Roboto';
+    font-size: 18px;
+}
+.fa-angle-double-down.active{
+    transform: rotate(180deg);
 }

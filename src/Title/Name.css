@@ -1,13 +1,18 @@
 .name {
-    width: 420px;
-    margin-left: 15px;
+    margin-left: 30px;
+    width: 1000px;
+    position: absolute;
+    transition: bottom 0.5s;
+    bottom: -40px;
 }
-
+.name.active {
+    bottom: 215px;
+}
 
 .name-text {
     font-family: 'Righteous', cursive;
     position: fixed;
-    font-size: 100px;
+    font-size: 244px;
     width: inherit;
     overflow: hidden;
 }
@@ -15,25 +20,23 @@
 .name-animation {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    transform-origin: 50%, 50%;
     transition: ease-in-out 0.5s;
+    transform: rotate(-270deg);
+    height: 284px;
+    width: 200px;
 }
 .name-animation.active {
     transform: rotate(0deg);
-    height: 190px;
-    width: 420px;
-}
-.name-animation.inactive {
-    transform: rotate(-270deg);
-    height: 118px;
-    width: 100px;
+    height: 460px;
+    width: 240px;
 }
 
 .name-container {
     position: absolute;
-    height: 100px;
+    height: 244px;
+    width: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -42,10 +45,7 @@
     transition: cubic-bezier(.29,.66,.77,1) 0.3s;
 }
 .name-container.active {
-    width: 410px;
-}
-.name-container.inactive {
-    width: 82px;
+    width: 1000px;
 }
 .name-container.matthew {
     top: 0px;

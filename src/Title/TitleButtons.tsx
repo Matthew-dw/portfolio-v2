@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
+import { activeClass } from '../helpers/active';
 import './TitleButtons.css'
 export type ButtonInfo = {
+    name: string;
     icon: string;
     onClick: () => void;
 }
@@ -36,17 +38,20 @@ export default function TitleButtons(props: TitleButtonsProps) {
     }, [active, isInitialLoad])
 
     return (
-        <div className={`title-buttons-container ${activeDelayed ? 'active' : 'inactive'}` }>
+        <div className={activeClass("title-buttons-container", activeDelayed)}>
             {buttons.map((b, index) => {
                 return (
                     <div 
-                        className={'title-button ' + b.icon} 
+                        key={index}
+                        className={'title-button'} 
                         onClick={b.onClick} 
-                        style={{
-                            left: activeDelayed ? `${120 * index}px` : 0,
-                            top: activeDelayed ? 0 : `${100*index}px`
-                        }}
-                    />
+                    > 
+                        <div className={'title-button-icon ' + b.icon} />
+                        
+                        <div className='title-button-name'> 
+                            {b.name}
+                        </div>
+                    </div>
                 )
             })}
         </div>
