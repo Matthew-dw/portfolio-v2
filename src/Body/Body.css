@@ -1,32 +1,42 @@
-.portfolio-body {
+.portfolio-body-wrapper {
     margin-top: 200px;
     height: calc(100vh - 200px);
     background: #f0f0f0;
     width: 100vw;
     overflow-y: scroll;
 }
-.portfolio-body::-webkit-scrollbar {
+.portfolio-body-wrapper::-webkit-scrollbar {
     width: 10px;
 }
 
-.portfolio-body::-webkit-scrollbar-track {
+.portfolio-body-wrapper::-webkit-scrollbar-track {
     background: #f0f0f0; 
 }
 
-.portfolio-body::-webkit-scrollbar-thumb {
+.portfolio-body-wrapper::-webkit-scrollbar-thumb {
     background: #232323; 
 }
+
+.portfolio-body {
+    background: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
 
 .line {
     height: 200px;
     width: 2px;
     background: #232323;
-    margin-left: calc(50vw - 1px);
 }
 .line.short {
-    height: 100px;
+    height: 20px;
 }
-.test {
-    margin: auto;
-    background: white;
+.body-project-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px
 }

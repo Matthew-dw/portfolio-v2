@@ -7,9 +7,6 @@ type NameProps = {
 
 export default function Name(props: NameProps) {
     const { keyframe } = props
-
-    
-    
     return (
         <div className={activeKeyFrameClass("name", keyframe, 2)}>
             <div className={activeKeyFrameClass("name-animation", keyframe, 2)}>

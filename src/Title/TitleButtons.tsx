@@ -38,11 +38,12 @@ export default function TitleButtons(props: TitleButtonsProps) {
     }, [active, isInitialLoad])
 
     return (
-        <div className={activeClass("title-buttons-container", activeDelayed)}>
+        <div className={activeClass("title-buttons-container", activeDelayed)} >
             {buttons.map((b, index) => {
                 return (
                     <div 
                         key={index}
+                        tabIndex={index + 1}
                         className={'title-button'} 
                         onClick={b.onClick} 
                     > 
