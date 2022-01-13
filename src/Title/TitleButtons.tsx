@@ -14,7 +14,7 @@ type TitleButtonsProps = {
 
 export default function TitleButtons(props: TitleButtonsProps) {
     const {showTitle: active, buttons} = props;
-    const [activeDelayed, setActiveDelayed] = useState<boolean>(true);
+    const [activeDelayed, setActiveDelayed] = useState<boolean>(false);
     const [isInitialLoad, setIsInitialLoad] = useState<boolean>(true);
 
     // Need to delay the change in css class for the animation to go off

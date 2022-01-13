@@ -11,7 +11,7 @@ type TitleProps = {
 
 export default function Title(props: TitleProps) {   
     const {showTitle, setShowTitle} = props;
-    const [keyframe, setKeyframe] = useState<number>(0);
+    const [keyframe, setKeyframe] = useState<number>(2);
     const isInitalLoad = useRef<boolean>(true);
 
     const buttonInfo: ButtonInfo[] = [
@@ -28,10 +28,10 @@ export default function Title(props: TitleProps) {
         {
             name: 'Resume',
             icon: 'far fa-file-alt',
-            onClick: () => window.open('https://www.linkedin.com/in/matthew-dw/'),
+            onClick: () => window.open('https://www.matthewwilliams.ca/resume.pdf'),
         },
         {
-            name: showTitle ? 'See More' : 'See Title',
+            name: '',
             icon: 'fas fa-angle-double-down '.concat(showTitle ? 'active' : 'inactive'),
             onClick: () => setShowTitle(!showTitle),
         },
