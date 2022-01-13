@@ -18,11 +18,11 @@ export default function Body() {
             projectlink: null
         }
     ]
-    const entries2022 = [
+    const entries2022: TimelineEntryProps[] = [
         {
             title: "Mathracer",
             subtitle: "TypeScript, Node.js, Express, Websockets",
-            image: undefined,
+            image: null,
             description: "Multiplayer game where players compete to answer a list of questions the fastest",
             githublink: "https://github.com/Matthew-dw/MathRacer",
             projectlink: null
@@ -30,17 +30,17 @@ export default function Body() {
         {
             title: "BookBazar",
             subtitle: "TypeScript, Nextjs, PostgresSQL",
-            image: undefined,
+            image: null,
             description: "Connects buyers and sellers of used textbooks at McMaster University. Developed for engineering capstone with 3 peers.",
             githublink: "https://github.com/calebmech/Book-Bazar",
             projectlink: "https://www.bookbazar.me/"
         },
     ]
-    const entries2017 = [
+    const entries2017: TimelineEntryProps[] = [
         {
             title: "McMaster University",
             subtitle: "Software Engineering - Graduating April 2022",
-            image: "https://upload.wikimedia.org/wikipedia/en/thumb/5/53/McMaster_University_logo.svg/1200px-McMaster_University_logo.svg.png",
+            image: null,
             description: "Technical Electives: Syntax-Based Tools & Compilers, Advanced Algorithms and Complexity",
             githublink: null,
             projectlink: null

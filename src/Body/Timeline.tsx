@@ -23,8 +23,8 @@ export function Timeline(props: TimelineProps) {
 export type TimelineEntryProps = {
     title: string,
     description: string,
-    image: string | undefined,
-    subtitle: string | undefined,
+    image: string | null,
+    subtitle: string | null,
     githublink: string | null,
     projectlink: string | null
 }
