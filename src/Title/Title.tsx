@@ -1,11 +1,12 @@
 import Name from './Name';
 import './Title.css'
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import TitleButtons, { ButtonInfo } from './TitleButtons';
 
 export default function Title() {   
-    const [showTitle, setShowTitle] = useState(true);
+    const [showTitle, setShowTitle] = useState(false);
     const [keyframe, setKeyframe] = useState<number>(3);
+    const isInitalLoad = useRef<boolean>(true);
     const buttonInfo: ButtonInfo[] = [
         {
             name: 'Resume',
@@ -26,6 +27,10 @@ export default function Title() {
 
     // Timers for triggering different css transitions for the name animation
     useEffect(() => {
+        if (isInitalLoad.current) {
+            isInitalLoad.current = false;
+            return
+        }
         var timer1 : NodeJS.Timeout;
         var timer2 : NodeJS.Timeout;
         var timer3 : NodeJS.Timeout;
