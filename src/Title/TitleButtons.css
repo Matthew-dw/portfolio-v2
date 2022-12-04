@@ -1,14 +1,12 @@
 .title-buttons-container {
-    position: absolute;
+    margin-top: -30px;
     height: 160px;
     display: flex;
-    transition: margin-left 0.8s, bottom 1s;
-    margin-left: 300px;
-    bottom: 15px;
+    opacity: 1;
+    transition: ease-in-out 0.2s;
 }
 .title-buttons-container.active {
-    margin-left: 30px;
-    bottom: 0px;
+    opacity: 0;
 }
 
 .title-button {
@@ -16,17 +14,12 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0), 0px 1px 1px 0px rgba(0, 0, 0, 0), 0px 1px 3px 0px rgba(0, 0, 0, 0);
     border-radius: 10px;
     width: 120px;
     height: 120px;
     margin: 15px;
-    margin-right: 40px;
     cursor: pointer;
     transition: 0.2s;
-}
-.title-button:hover {
-    box-shadow: 0px 2px 3px -1px rgba(0,0,0,0.25), 0px 1px 3px 0px rgba(0,0,0,0.2), 0px 1px 3px 0px rgba(0,0,0,0.2);
 }
 .title-button-icon {
     line-height: 80px;

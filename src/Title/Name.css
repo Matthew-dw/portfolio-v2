@@ -1,12 +1,14 @@
 .name {
-    margin-left: 30px;
-    width: 1000px;
-    position: absolute;
-    transition: bottom 0.5s;
-    bottom: -40px;
+    width: 200px;
+    filter: drop-shadow(2px 3px 5px rgba(0, 0, 0, 0.33));
+    transition: ease-in-out 0.4s;
 }
 .name.active {
-    bottom: 215px;
+    width: 1015px;
+}
+
+.name:hover {
+    cursor: pointer;
 }
 
 .name-text {
@@ -24,7 +26,7 @@
     align-items: center;
     transition: ease-in-out 0.5s;
     transform: rotate(-270deg);
-    height: 284px;
+    height: 290px;
     width: 200px;
 }
 .name-animation.active {

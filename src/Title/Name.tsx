@@ -3,12 +3,13 @@ import './Name.css'
 
 type NameProps = {
     keyframe: number;
+    onClick: () => void;
 }
 
 export default function Name(props: NameProps) {
     const { keyframe } = props
     return (
-        <div className={activeKeyFrameClass("name", keyframe, 2)}>
+        <div className={activeKeyFrameClass("name", keyframe, 3)} onClick={() => props.onClick()}>
             <div className={activeKeyFrameClass("name-animation", keyframe, 2)}>
                 <div className={activeKeyFrameClass("name-container matthew", keyframe, 1)}>
                     <div className={activeKeyFrameClass("name-text", keyframe, 1)}> 
